@@ -126,28 +126,28 @@ void xbeePacks(void)
   uint16_t i;
 
   /*Pack 0*/
-  for(i = 260; i < 264; i++)
+  for(i = 256; i < 261; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 
   /*Pack 1*/
-  for(i = 265; i < 269; i++)
+  for(i = 261; i < 266; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 
   /*Pack 2*/
-  for(i = 270; i < 274; i++)
+  for(i = 266; i < 271; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 
   /*Pack 3*/
-  for(i = 275; i < 279; i++)
+  for(i = 271; i < 276; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 
-  /*Pack 4*/
+  /*Pack 4
   for(i = 280; i < 284; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 
-  /*Pack 5*/
+  Pack 5
   for(i = 285; i < 289; i++)
-    xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
+    xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3); */
 }
 
 void xbeeGeneral(void)
@@ -156,7 +156,7 @@ void xbeeGeneral(void)
 
 	/*Bateria General Information*/
 	xbeeSend(0, can_vector[0].word_0, 0, 0, 0);
-  for(i = 51; i < 55; i++)
+  for(i = 50; i < 55; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 
 
@@ -168,14 +168,25 @@ void xbeeGeneral(void)
   xbeeSend(162, can_vector[161].word_0, can_vector[161].word_1, can_vector[161].word_2, can_vector[161].word_3);
   for(i = 156; i < 160; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
+  for(i = 180; i < 189; i++)
+      xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
+  xbeeSend(163, can_vector[163].word_0, can_vector[163].word_1, can_vector[163].word_2, can_vector[163].word_3);
+  xbeeSend(173, can_vector[173].word_0, can_vector[173].word_1, can_vector[173].word_2, can_vector[173].word_3);
+  xbeeSend(178, can_vector[178].word_0, can_vector[178].word_1, can_vector[178].word_2, can_vector[178].word_3);
+  xbeeSend(179, can_vector[179].word_0, can_vector[179].word_1, can_vector[179].word_2, can_vector[179].word_3);
 
 
   
 	/*Controle Information*/
   xbeeSend(1, can_vector[1].word_0, can_vector[1].word_1, can_vector[1].word_2, can_vector[1].word_3);
-  for(i = 101; i < 108; i++)
+  for(i = 101; i < 107; i++)
     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
+  for(i = 130; i < 132; i++)
+     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
+  for(i = 110; i < 114; i++)
+     xbeeSend(i, can_vector[i].word_0, can_vector[i].word_1, can_vector[i].word_2, can_vector[i].word_3);
 }
+
 
 void telemetrySend(void)
 {
