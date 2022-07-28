@@ -16,7 +16,9 @@ uint32_t actual_timer;
 uint32_t previous_timer;
 uint8_t aux;
 
+//Teste
 
+int a =0;
 
 /* Pages and informations:
 

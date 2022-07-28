@@ -1,3 +1,7 @@
 /Drivers/
 /Src/
 /startup/
+/makefile
+/sources.mk
+/objects.list
+/objects.mk
